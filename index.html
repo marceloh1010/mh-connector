@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MH Global Connector</title>
+    <!-- Usando Tailwind via CDN para simplificar -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <style>
+      html { scroll-behavior: smooth; }
+      body { font-family: 'Montserrat', sans-serif; }
+      .font-serif { font-family: 'Playfair Display', serif; }
+      .hero-bg-animate::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-image: 
+          linear-gradient(to bottom, rgba(17, 24, 39, 0.8) 0%, rgba(0, 0, 0, 0.95) 100%), 
+          url(https://images.unsplash.com/photo-1569329785803-514b8b51d529?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1920&q=80);
+        background-size: cover;
+        background-position: center;
+        animation: kenburns 20s ease-out forwards;
+        z-index: -1;
+      }
+      @keyframes kenburns {
+        0% { transform: scale(1); }
+        100% { transform: scale(1.05); }
+      }
+      @keyframes draw {
+        to { stroke-dashoffset: 0; }
+      }
+      .logo-arc {
+        stroke-dasharray: 126;
+        stroke-dashoffset: 126;
+        animation: draw 1.2s 0.5s ease-out forwards;
+      }
+      .typewriter-cursor {
+        display: inline-block;
+        width: 3px;
+        height: 1.5rem;
+        background-color: #DC2626;
+        animation: blink 0.7s infinite;
+      }
+      @keyframes blink {
+        0%, 100% { opacity: 1; }
+        50% { opacity: 0; }
+      }
+    </style>
+  </head>
+  <body class="bg-black text-gray-300">
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>
