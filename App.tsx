@@ -205,8 +205,8 @@ const openLinkedInCoverGenerator = (e: React.MouseEvent<HTMLAnchorElement>) => {
                 <div class="banner-container" id="linkedin-cover">
                     <div class="profile-pic-placeholder"><span>Sua Foto de Perfil Ficará Aqui</span></div>
                     <div class="content">
-                        <h1>MH Connector</h1>
-                        <p class="slogan">Conectando mercados globais, desenvolvendo líderes de impacto.</p>
+                        <h1>MH Global Connector</h1>
+                        <p class="slogan">Global Consultancy & Networking Hub | by Marcelo Hernandez</p>
                         <p class="contact-info">marceloh1010@gmail.com</p>
                     </div>
                 </div>
@@ -354,6 +354,7 @@ const Header = ({ activeSection }: { activeSection: string }) => {
             <div className="container mx-auto px-6 py-3 flex justify-between items-center">
                 <a href="#" onClick={(e) => smoothScrollTo(e, 'body')} className="flex items-center space-x-2">
                     <DetailedLogoIcon className={`w-12 h-12 transition-all duration-300 ${isScrolled ? 'scale-90' : 'scale-100'}`} />
+                    <span className="hidden md:block text-xl font-bold font-serif tracking-wide text-white pl-2">Marcelo Hernandez</span>
                 </a>
                 <nav className="hidden md:flex items-center space-x-2">
                     {navLinks.map(({ href, label }) => {
@@ -431,17 +432,22 @@ const Hero = () => (
                <DetailedLogoIcon className="w-32 h-32 md:w-40 md:h-40" />
             </div>
             <h1 className="text-4xl md:text-6xl font-bold leading-tight font-serif" style={{ textShadow: '2px 2px 8px rgba(0,0,0,0.7)' }}>
-                MH Connector
+                MH Global Connector
             </h1>
             <p className="text-lg md:text-xl mt-3 text-gray-300 font-light" style={{ textShadow: '1px 1px 2px rgba(0,0,0,0.7)' }}>
-                Conectando mercados globais, desenvolvendo líderes de impacto.
+                Global Consultancy & Networking Hub | by Marcelo Hernandez
             </p>
-            <Typewriter subtitles={['Executive Leader in Logistics & Trade', 'Global Agent Networking Specialist', 'LatAm–Europe Market Connector', 'Strategic Expansion Expert']} />
+            <Typewriter subtitles={[
+                'Corporate Trainer & Mentor',
+                'Independent Strategy Consultant',
+                'Global Network Connector',
+                'Developing Leaders for Global Impact'
+            ]} />
             <p className="text-md md:text-lg mt-6 max-w-2xl mx-auto text-gray-300" style={{ textShadow: '1px 1px 4px rgba(0,0,0,0.7)' }}>
-                Com mais de 30 anos de experiência, conecto empresas entre a América Latina e a Europa, otimizando cadeias de suprimentos e fomentando parcerias estratégicas para expansão global.
+                Atuo como profissional independente conectando a América Latina e Europa, oferecendo mentoria para líderes e abrindo portas no mercado internacional através de uma rede estratégica.
             </p>
             <a href="#services" onClick={(e) => smoothScrollTo(e, '#services')} className="mt-8 inline-block bg-red-600 text-white font-bold py-3 px-8 rounded-full text-lg uppercase tracking-wider transform hover:scale-105 hover:bg-red-500 transition-all duration-300 shadow-lg hover:shadow-red-500/50">
-                Conheça Meus Serviços
+                Descubra Minhas Palestras e Consultorias
             </a>
         </div>
     </section>
@@ -453,12 +459,12 @@ const About = () => (
             <FadeIn>
                 <div className="text-center mb-16">
                     <h2 className="text-4xl font-bold text-white font-serif">Sobre Mim</h2>
-                    <p className="text-lg text-gray-400 mt-2">Conectando Pessoas, Mercados e Oportunidades</p>
+                    <p className="text-lg text-gray-400 mt-2">Formando Líderes para o Mundo</p>
                 </div>
                 <div className="max-w-4xl mx-auto text-lg text-gray-300 space-y-4 text-center md:text-left">
-                    <p>Com mais de 30 anos de experiência em comércio internacional, logística e agenciamento de cargas, ajudo empresas a expandir além-fronteiras, construindo redes de agentes, otimizando cadeias de suprimentos e fomentando parcerias estratégicas, especialmente entre a América Latina e a Europa.</p>
-                    <p>Minha expertise abrange Desenvolvimento de Negócios Globais, Entrada de Mercado e Otimização de Supply Chain. Trago uma abordagem prática e colaborativa para a construção de redes de agentes, liderança de equipes e resolução de desafios comerciais complexos com velocidade e precisão.</p>
-                    <p>Tendo trabalhado em mais de 30 países, prospero em ambientes multiculturais. Paralelamente às minhas funções executivas, contribuo como Conselheiro, Coach Certificado e Treinador Corporativo, ajudando clientes a desenvolver programas de aprendizagem impactantes.</p>
+                    <p>Mais do que um executivo de logística, sou um formador de pessoas e negócios. Transformo meus 30 anos de experiência prática em comércio internacional em metodologias de ensino que preparam empresas e profissionais para os desafios reais da expansão global.</p>
+                    <p>Atuando como <strong className="text-white">Treinador Corporativo, Coach Certificado e Conselheiro Independente</strong>, concentro minha energia na formação de talentos. Ajudo organizações a não apenas moverem cargas, mas a elevarem o patamar de suas equipes, garantindo que a estratégia de expansão seja liderada por pessoas preparadas para a complexidade multicultural.</p>
+                    <p>Através da iniciativa <strong>MH Connector</strong>, atuo como um hub estratégico, conectando clientes aos melhores parceiros e soluções globais, garantindo que minhas consultorias e treinamentos sejam sempre baseados em vivências atuais e resultados comprovados em mais de 30 países.</p>
                 </div>
             </FadeIn>
         </div>
@@ -466,10 +472,10 @@ const About = () => (
 );
 
 const services = [
-    { icon: GlobeIcon, title: 'Desenvolvimento de Negócios Globais', description: 'Impulsiono a expansão internacional através de parcerias estratégicas com agentes e alianças regionais.' },
-    { icon: BriefcaseIcon, title: 'Otimização de Supply Chain', description: 'Desenho operações logísticas eficientes e escaláveis para garantir vantagem competitiva no mercado global.' },
-    { icon: UsersIcon, title: 'Liderança e Treinamento Corporativo', description: 'Inspiro equipes multiculturais e capacito líderes com programas de aprendizagem de alto impacto para ambições internacionais.' },
-    { icon: LightbulbIcon, title: 'Consultoria Estratégica', description: 'Forneço insights e suporte na execução de sourcing, eficiência de custos e operações transfronteiriças.' },
+    { icon: UsersIcon, title: 'Liderança e Treinamento Corporativo', description: 'Programas de capacitação de alto impacto para desenvolver líderes globais e equipes multiculturais de alta performance.' },
+    { icon: LightbulbIcon, title: 'Consultoria Estratégica Independente', description: 'Diagnóstico e planejamento personalizado para empresas que desejam otimizar custos e iniciar operações transfronteiriças.' },
+    { icon: GlobeIcon, title: 'Conexão de Negócios Globais', description: 'Acesso à minha rede global de parceiros e agentes validados (MH Connector Network) para expandir sua operação.' },
+    { icon: BriefcaseIcon, title: 'Otimização de Supply Chain', description: 'Desenho de operações logísticas eficientes para garantir vantagem competitiva no comércio internacional.' },
 ];
 
 const Services = () => (
@@ -478,7 +484,7 @@ const Services = () => (
             <FadeIn>
                 <div className="text-center mb-16">
                     <h2 className="text-4xl font-bold text-white font-serif">Serviços</h2>
-                    <p className="text-lg text-gray-400 mt-2">Capacitação para o Mercado Global</p>
+                    <p className="text-lg text-gray-400 mt-2">Da Sala de Aula à Operação Global</p>
                 </div>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                     {services.map((service, index) => (
@@ -662,8 +668,8 @@ const Footer = () => (
     <footer className="bg-black border-t border-gray-800 py-12">
         <div className="container mx-auto px-6 text-center text-gray-400">
             <DetailedLogoIcon className="w-20 h-20 mx-auto mb-4" />
-            <h3 className="text-2xl font-semibold text-white font-serif">MH Connector</h3>
-            <p className="mb-4 text-gray-300">Conectando mercados globais, desenvolvendo líderes de impacto.</p>
+            <h3 className="text-2xl font-semibold text-white font-serif">Marcelo Hernandez</h3>
+            <p className="mb-4 text-gray-300 text-sm">Certified Corporate Trainer | MH Connector Network Lead</p>
             <div className="text-gray-400 space-y-1 mb-6">
                 <p>Porto, Portugal</p>
                 <p><a href="mailto:marceloh1010@gmail.com" className="hover:text-red-500 transition-colors">marceloh1010@gmail.com</a></p>
